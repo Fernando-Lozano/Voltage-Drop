@@ -1,0 +1,8 @@
+@media (max-width: 767.98px) {
+  #dummyDiv {
+    height: 56px;
+  }
+  .lastThree {
+  padding-top: 56px;
+}
+}
