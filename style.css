@@ -1,8 +1,72 @@
-@media (max-width: 767.98px) {
-  #dummyDiv {
-    height: 56px;
-  }
-  .lastThree {
-  padding-top: 56px;
+html {
+    scroll-behavior: smooth;
 }
+body {
+  background: yellow;
+}
+.mainSquares {
+  background: tomato;
+  max-width: 600px;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .mainSquares {
+    height: 50vh;
+  }
+}
+
+
+
+/* mobile */
+@media (max-width: 767.98px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+/* hamburger menu */
+  .icon-bar {
+  	width: 22px; 
+  	height: 2px;
+    background-color: #000000;
+    border-radius: 20px;
+  	display: block;
+	  transition: all 0.2s;
+	  margin-top: 4px
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: transparent !important;
+  }
+  .open .top-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 10%;
+  }
+      
+  .open .middle-bar {
+    /* opacity: 0; */
+    width: 15px;
+    transform: rotate(-10deg) translate(2px, -6px);
+  }
+      
+  .open .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+
+  #singlePhaseLength {
+    padding-top: 56px;
+  }
+  .lastThree::before {
+    display: block;
+    content: "";
+    margin-top: -56px;
+    height: 56px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .mainSquares {
+    height: 100vh;
+  }
 }
