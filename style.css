@@ -1,21 +1,39 @@
+/*
+my colors:
+009DDC bluish
+F26430 burnt orange
+FF3CC7 hot pink
+7DE2D1 teel
+58355E purple
+ */
+
 body {
-  background: yellow;
+  background: rgb(0,255,242);
+  background: linear-gradient(45deg, rgba(0,255,242,1) 0%, rgba(107,0,255,1) 100%);
 }
 .mainSquares {
-  background: tomato;
-  max-width: 600px;
+  background: rgb(204, 204, 204);
+}
+/* rounding square borders */
+.roundedCorners {
+  border-radius: 80px 2%;
 }
 
 /* desktop */
 @media (min-width: 768px) {
-  .mainSquares {
-    height: 50vh;
-  }
   .menuOffset1 {
     display: none;
   }
   .menuOffset {
     display: none;
+  }
+  .mainSquares {
+    max-width: 300px;
+    margin: 8px 0px;
+    height: calc(50vh - 16px);
+  }
+  .firstThirdSquare {
+    margin-left: auto;
   }
 }
 
@@ -68,6 +86,7 @@ body {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
   }
+  /* main content */
   .mainSquares {
     margin: 10px 0;
     height: calc(100vh - 78px);
