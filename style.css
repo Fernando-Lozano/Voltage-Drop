@@ -42,7 +42,7 @@ select, input {
   position: relative;
   left: 50%;
   margin-left: -60px;
-  margin-top: 10px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .buttonsFirst {
@@ -75,7 +75,7 @@ select, input {
     display: none;
   }
   .mainSquares {
-    min-height: 280px;
+    min-height: 380px;
     max-width: 300px;
     margin: 8px 0px;
     height: calc(50vh - 16px);
@@ -86,11 +86,17 @@ select, input {
   .firstThirdSquare {
     margin-left: auto;
   }
+  .main {
+    height: 85%;
+  }
   .mainFields {
-    height: 5vh;
+    height: 12%;
+  }
+  p {
+    margin: 0;
   }
   .lastField {
-    margin-top: 20px;
+    height: 28%;
   }
   .result {
     padding-top: 4px;
