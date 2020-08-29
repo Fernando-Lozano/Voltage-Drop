@@ -6,19 +6,17 @@ FF3CC7 hot pink
 7DE2D1 teel
 58355E purple
  */
-html {
-  background: rgb(107,0,255,1);
-}
 body {
   background: rgb(0,255,242);
   background: linear-gradient(45deg, rgba(0,255,242,1) 0%, rgb(107,0,255) 100%);
   font-family: 'Roboto Mono', monospace;
 }
 .mainSquares {
-  background: rgb(243, 243, 243);
+  background: rgb(255, 255, 255);
   -webkit-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
+  font-size: 0.8rem;
 }
 h4 {
   padding-top: 6px;
@@ -35,6 +33,37 @@ hr {
 /* rounding square borders */
 .roundedCorners {
   border-radius: 80px 2%;
+}
+select, input {
+  width: 80%;
+}
+.label {
+  width: 120px;
+  position: relative;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.buttonsFirst {
+  background: rgb(107,0,255);
+  border: 1px solid rgb(0,255,242);
+  border-radius: 8px;
+  padding: 10px 0;
+  transition: 0.5s ease-in-out;
+}
+.buttonsFirst:hover {
+  background: rgb(0,255,242);
+}
+.buttonsLast {
+  background: rgb(0,255,242);
+  border: 1px solid rgb(107,0,255);
+  border-radius: 8px;
+  padding: 10px 0;
+  transition: all 0.5s ease-in-out;
+}
+.buttonsLast:hover {
+  background: rgb(107,0,255);
 }
 
 /* desktop */
@@ -56,6 +85,19 @@ hr {
   }
   .firstThirdSquare {
     margin-left: auto;
+  }
+  .mainFields {
+    height: 5vh;
+  }
+  .lastField {
+    margin-top: 20px;
+  }
+  .result {
+    padding-top: 4px;
+    margin-bottom: 0;
+  }
+  button {
+    margin-top: 12px;
   }
 }
 
@@ -118,5 +160,17 @@ hr {
   }
   h4 {
     font-size: 1.75rem;
+  }
+  hr {
+    margin-bottom: 20px;
+  }
+  .mainFields {
+    height: 10vh;
+  }
+  .lastField {
+    margin-top: 20px;
+  }
+  p {
+    font-size: 1rem;
   }
 }
