@@ -6,13 +6,31 @@ FF3CC7 hot pink
 7DE2D1 teel
 58355E purple
  */
-
+html {
+  background: rgb(107,0,255,1);
+}
 body {
   background: rgb(0,255,242);
-  background: linear-gradient(45deg, rgba(0,255,242,1) 0%, rgba(107,0,255,1) 100%);
+  background: linear-gradient(45deg, rgba(0,255,242,1) 0%, rgb(107,0,255) 100%);
+  font-family: 'Roboto Mono', monospace;
 }
 .mainSquares {
-  background: rgb(204, 204, 204);
+  background: rgb(243, 243, 243);
+  -webkit-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
+  box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
+}
+h4 {
+  padding-top: 6px;
+}
+hr {
+  width: 80%;
+  border-top: 1px solid rgb(107,0,255);
+  margin-top: 1px;
+}
+.lastTwo {
+  border-top: 1px solid rgb(0,255,242);
+  margin-top: 1px;
 }
 /* rounding square borders */
 .roundedCorners {
@@ -28,9 +46,13 @@ body {
     display: none;
   }
   .mainSquares {
+    min-height: 280px;
     max-width: 300px;
     margin: 8px 0px;
     height: calc(50vh - 16px);
+  }
+  h4 {
+    font-size: 1.25rem;
   }
   .firstThirdSquare {
     margin-left: auto;
@@ -43,6 +65,9 @@ body {
 @media (max-width: 767.98px) {
   html {
     scroll-behavior: smooth;
+  }
+  .navbar {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(190, 190, 190));
   }
   /* element to offset scroll */
   .menuOffset1 {
@@ -90,5 +115,8 @@ body {
   .mainSquares {
     margin: 10px 0;
     height: calc(100vh - 78px);
+  }
+  h4 {
+    font-size: 1.75rem;
   }
 }
