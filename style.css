@@ -18,13 +18,14 @@ body {
   box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   font-size: 0.8rem;
 }
-h4 {
-  padding-top: 6px;
+.mainHeaders {
+  padding-top: 12px; 
 }
 hr {
   width: 80%;
   border-top: 1px solid rgb(107,0,255);
   margin-top: 1px;
+  padding-bottom: 1px;
 }
 .lastTwo {
   border-top: 1px solid rgb(0,255,242);
@@ -35,18 +36,18 @@ hr {
   border-radius: 80px 2%;
 }
 select, input {
-  width: 80%;
+  width: 95%;
+  border-radius: 8px;
+  font-size: 16px;
 }
 .label {
-  width: 120px;
-  position: relative;
-  left: 50%;
-  margin-left: -60px;
-  margin-top: 15px;
+  width: 40%;
+  margin-top: 10px;
   cursor: pointer;
 }
 .buttonsFirst {
   background: rgb(107,0,255);
+  color: white;
   border: 1px solid rgb(0,255,242);
   border-radius: 8px;
   padding: 10px 0;
@@ -54,6 +55,8 @@ select, input {
 }
 .buttonsFirst:hover {
   background: rgb(0,255,242);
+  border: 1px solid rgb(107, 0, 255);
+  color: black;
 }
 .buttonsLast {
   background: rgb(0,255,242);
@@ -64,6 +67,18 @@ select, input {
 }
 .buttonsLast:hover {
   background: rgb(107,0,255);
+  border: 1px solid rgb(0, 255, 242);
+  color: white;
+}
+.reset {
+  background: rgb(255, 0, 64);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  transition: all 0.5s ease-in-out;
+}
+.reset:hover {
+  background: red;
 }
 
 /* desktop */
@@ -114,8 +129,15 @@ select, input {
   html {
     scroll-behavior: smooth;
   }
-  .navbar {
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(190, 190, 190));
+  .navbarContent {
+    color: white;
+  }
+  .scrolled {
+      background: rgba(106, 0, 255, 0.7);
+      transition: all 0.5s ease-in-out;
+  }
+  .initialNav {
+    background: rgb(107,0,255);
   }
   /* element to offset scroll */
   .menuOffset1 {
@@ -133,7 +155,7 @@ select, input {
   .icon-bar {
   	width: 22px; 
   	height: 2px;
-    background-color: #000000;
+    background-color: white;
     border-radius: 20px;
   	display: block;
 	  transition: all 0.2s;
@@ -147,6 +169,7 @@ select, input {
   .open .top-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 10%;
+    width: 20px;
   }
       
   .open .middle-bar {
@@ -163,6 +186,7 @@ select, input {
   .mainSquares {
     margin: 10px 0;
     height: calc(100vh - 78px);
+    min-height: 600px;
   }
   h4 {
     font-size: 1.75rem;
