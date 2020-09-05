@@ -1,0 +1,7 @@
+Things to do:
+  - Program second calculator
+
+
+
+
+  note: use findAnswer function for third calculator.
