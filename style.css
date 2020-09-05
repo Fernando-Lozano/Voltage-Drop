@@ -50,7 +50,7 @@ select, input {
   color: white;
   border-radius: 8px;
   padding: 10px 0;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .buttonsFirst:hover {
   background: rgb(0,255,242);
@@ -60,7 +60,7 @@ select, input {
   background: rgb(0,255,242);
   border-radius: 8px;
   padding: 10px 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .buttonsLast:hover {
   background: rgb(107,0,255);
@@ -71,7 +71,7 @@ select, input {
   color: white;
   border-radius: 8px;
   padding: 10px 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .reset:hover {
   /* background: red; */
