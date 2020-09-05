@@ -125,7 +125,6 @@ var drops1;
 var vDrop1;
 var k1;
 var mm1;
-var answers1;
 calculate1.addEventListener("click", () => {
   units1 = Number(unit1.value);
   types1 = Number(type1.value);
@@ -136,8 +135,7 @@ calculate1.addEventListener("click", () => {
   vDrop1 = Number((volts1 * drops1).toFixed(2));
   k1 = k[types1][units1];
   mm1 = (((loads1 * lengths1 * 2 * k1) / vDrop1) * special).toFixed(4);
-  answers1 = findAnswer(mm1);
-  answer1.textContent = answers1;
+  answer1.textContent = findAnswer(mm1);
 });
 reset1.addEventListener("click", () => {
   unit1.value = "";
@@ -160,3 +158,25 @@ function findAnswer(mm) {
   }
   return "invalid";
 }
+// second calculator
+// extract values from inputs
+var unit2 = document.querySelector("#unit1");
+var type2 = document.querySelector("#type1");
+var load2 = document.querySelector("#load1");
+var size2 = document.querySelector("#length1");
+var volt2 = document.querySelector("#volt1");
+var drop2 = document.querySelector("#drop1");
+var calculate2 = document.querySelector("#calculate1");
+var answer2 = document.querySelector("#result1");
+var reset2 = document.querySelector("#reset1");
+// store inputs on calculate
+var units2;
+var types2;
+var loads2;
+var sizes2;
+var volts2;
+var drops2;
+var vDrop2;
+var k2;
+var mm2;
+var answers2;
