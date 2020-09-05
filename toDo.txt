@@ -1,7 +1,9 @@
 Things to do:
   - Program second calculator
+    - add reset
 
 
 
 
   note: use findAnswer function for third calculator.
+  note: use findLength function for fourth calculator.

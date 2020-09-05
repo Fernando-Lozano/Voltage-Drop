@@ -149,6 +149,55 @@ reset1.addEventListener("click", () => {
   k1 = undefined;
   answer1.textContent = "0";
 });
+// second calculator
+// extract values from inputs
+var unit2 = document.querySelector("#unit2");
+var type2 = document.querySelector("#type2");
+var load2 = document.querySelector("#load2");
+var size2 = document.querySelector("#size2");
+var volt2 = document.querySelector("#volt2");
+var drop2 = document.querySelector("#drop2");
+var calculate2 = document.querySelector("#calculate2");
+var answer2 = document.querySelector("#result2")
+var reset2 = document.querySelector("#reset2");
+// store inputs on calculate
+var units2;
+var types2;
+var loads2;
+var sizes2;
+var volts2;
+var drops2;
+var vDrops2
+var k2;
+var cm2;
+calculate2.addEventListener("click", () => {
+  units2 = Number(unit2.value);
+  types2 = Number(type2.value);
+  loads2 = Number(load2.value);
+  if (size2.value !== "-1") {
+    sizes2 = Number(size2.value);
+  }
+  if (volt2.value !== "-1") {
+    volts2 = Number(volt2.value);
+  }
+  if (drop2.value !== "-1") {
+    drops2 = Number(drop2.value);
+  }
+  vDrops2 = Number((volts2 * drops2).toFixed(2));
+  if (!(units2 === -1 || types2 === -1)) {
+    k2 = k[types2][units2];
+  }
+  cm2 = (sizes2 / special).toFixed(4);
+  answer2.textContent = findLength(units2, cm2, vDrops2, k2, loads2);
+});
+reset2.addEventListener("click", () => {
+
+});
+
+
+
+
+
 // search array to find wire size
 function findAnswer(mm) {
   for (let i = 0; i < wiresMm2.length; i++) {
@@ -161,25 +210,20 @@ function findAnswer(mm) {
   }
   return "invalid";
 }
-// second calculator
-// extract values from inputs
-var unit2 = document.querySelector("#unit2");
-var type2 = document.querySelector("#type2");
-var load2 = document.querySelector("#load2");
-var size2 = document.querySelector("#length2");
-var volt2 = document.querySelector("#volt2");
-var drop2 = document.querySelector("#drop2");
-var calculate2 = document.querySelector("#calculate2");
-var answer2 = document.querySelector("#result2");
-var reset2 = document.querySelector("#reset2");
-// store inputs on calculate
-var units2;
-var types2;
-var loads2;
-var sizes2;
-var volts2;
-var drops2;
-var vDrop2;
-var k2;
-var mm2;
-var answers2;
+function findLength(unit, cm, vDrop, k, load, threeP = 1) {
+  let answer;
+  let units;
+  answer = ((cm * vDrop) / (k * load * 2 * threeP)).toFixed(2);
+  if (unit === 0) {
+    units = " ft";
+  }
+  else {
+    units = " m";
+  }
+  if (answer === "NaN") {
+    return "invalid";
+  }
+  else {
+    return answer + units;
+  }
+}
