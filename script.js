@@ -133,17 +133,20 @@ calculate1.addEventListener("click", () => {
   volts1 = Number(volt1.value);
   drops1 = Number(drop1.value);
   vDrop1 = Number((volts1 * drops1).toFixed(2));
-  k1 = k[types1][units1];
+  if (!(units1 === -1 || types1 === -1)) {
+    k1 = k[types1][units1];
+  }
   mm1 = (((loads1 * lengths1 * 2 * k1) / vDrop1) * special).toFixed(4);
   answer1.textContent = findAnswer(mm1);
 });
 reset1.addEventListener("click", () => {
-  unit1.value = "";
-  type1.value = "";
+  unit1.value = "-1";
+  type1.value = "-1";
   load1.value = "";
   length1.value = "";
   volt1.value = "";
   drop1.value = "";
+  k1 = undefined;
   answer1.textContent = "0";
 });
 // search array to find wire size
@@ -160,15 +163,15 @@ function findAnswer(mm) {
 }
 // second calculator
 // extract values from inputs
-var unit2 = document.querySelector("#unit1");
-var type2 = document.querySelector("#type1");
-var load2 = document.querySelector("#load1");
-var size2 = document.querySelector("#length1");
-var volt2 = document.querySelector("#volt1");
-var drop2 = document.querySelector("#drop1");
-var calculate2 = document.querySelector("#calculate1");
-var answer2 = document.querySelector("#result1");
-var reset2 = document.querySelector("#reset1");
+var unit2 = document.querySelector("#unit2");
+var type2 = document.querySelector("#type2");
+var load2 = document.querySelector("#load2");
+var size2 = document.querySelector("#length2");
+var volt2 = document.querySelector("#volt2");
+var drop2 = document.querySelector("#drop2");
+var calculate2 = document.querySelector("#calculate2");
+var answer2 = document.querySelector("#result2");
+var reset2 = document.querySelector("#reset2");
 // store inputs on calculate
 var units2;
 var types2;
