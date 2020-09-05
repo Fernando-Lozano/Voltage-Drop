@@ -103,6 +103,7 @@ const k = [
 ];
 // conversion number 
 const special = 0.000507;
+const special1 = 0.866;
 
 // first calculator
 // extract values from inputs
@@ -191,7 +192,110 @@ calculate2.addEventListener("click", () => {
   answer2.textContent = findLength(units2, cm2, vDrops2, k2, loads2);
 });
 reset2.addEventListener("click", () => {
-
+  unit2.value = "-1";
+  type2.value = "-1";
+  load2.value = "";
+  size2.value = "-1";
+  volt2.value = "-1";
+  drop2.value = "-1";
+  k2 = undefined;
+  answer2.textContent = "0";
+});
+// third calculator
+// extract values from inputs
+var unit3 = document.querySelector("#unit3");
+var type3 = document.querySelector("#type3");
+var load3 = document.querySelector("#load3");
+var length3 = document.querySelector("#length3");
+var volt3 = document.querySelector("#volt3");
+var drop3 = document.querySelector("#drop3");
+var calculate3 = document.querySelector("#calculate3");
+var answer3 = document.querySelector("#result3");
+var reset3 = document.querySelector("#reset3");
+// store inputs on calculate
+var units3;
+var types3;
+var loads3;
+var lengths3;
+var volts3;
+var drops3;
+var vDrop3;
+var k3;
+var mm3;
+calculate3.addEventListener("click", () => {
+  units3 = Number(unit3.value);
+  types3 = Number(type3.value);
+  loads3 = Number(load3.value);
+  lengths3 = Number(length3.value);
+  volts3 = Number(volt3.value);
+  drops3 = Number(drop3.value);
+  vDrop3 = Number((volts3 * drops3).toFixed(2));
+  if (!(units3 === -1 || types3 === -1)) {
+    k3 = k[types3][units3];
+  }
+  mm3 = (((loads3 * lengths3 * 2 * k3 * special1) / vDrop3) * special).toFixed(4);
+  answer3.textContent = findAnswer(mm3);
+});
+reset3.addEventListener("click", () => {
+  unit3.value = "-1";
+  type3.value = "-1";
+  load3.value = "";
+  length3.value = "";
+  volt3.value = "";
+  drop3.value = "";
+  k3 = undefined;
+  answer3.textContent = "0";
+});
+// second calculator
+// extract values from inputs
+var unit4 = document.querySelector("#unit4");
+var type4 = document.querySelector("#type4");
+var load4 = document.querySelector("#load4");
+var size4 = document.querySelector("#size4");
+var volt4 = document.querySelector("#volt4");
+var drop4 = document.querySelector("#drop4");
+var calculate4 = document.querySelector("#calculate4");
+var answer4 = document.querySelector("#result4")
+var reset4 = document.querySelector("#reset4");
+// store inputs on calculate
+var units4;
+var types4;
+var loads4;
+var sizes4;
+var volts4;
+var drops4;
+var vDrop4;
+var k4;
+var cm4;
+calculate4.addEventListener("click", () => {
+  units4 = Number(unit4.value);
+  types4 = Number(type4.value);
+  loads4 = Number(load4.value);
+  if (size4.value !== "-1") {
+    sizes4 = Number(size4.value);
+  }
+  if (volt4.value !== "-1") {
+    volts4 = Number(volt4.value);
+  }
+  if (drop4.value !== "-1") {
+    drops4 = Number(drop4.value);
+  }
+  vDrops4 = Number((volts4 * drops4).toFixed(2));
+  if (!(units4 === -1 || types4 === -1)) {
+    k4 = k[types4][units4];
+  }
+  cm4 = (sizes4 / special).toFixed(4);
+  answer4.textContent = findLength(units4, cm4, vDrops4, k4, loads4, special1);
+});
+reset4.addEventListener("click", () => {
+  unit4.value = "-1";
+  type4.value = "-1";
+  load4.value = "";
+  size4.value = "-1";
+  volt4.value = "-1";
+  drop4.value = "-1";
+  k4 = undefined;
+  answer4.textContent = "0";
 });
 
 

@@ -166,7 +166,7 @@
               </div>
               <div class="container lastField px-0">
                 <h4 class="result result1 text-center">
-                  Wire size: <span id="result1">0</span>
+                  Size: <span id="result1">0</span>
                 </h4>
                 <div class="container d-flex justify-content-center">
                   <label class="buttonsFirst label text-center mx-1" id="calculate1">CALCULATE</label>
@@ -317,9 +317,9 @@
                   </div>
                   <div class="col-6">
                     <select name="unit3" id="unit3">
-                      <option hidden disabled selected value></option>
-                      <option value="feet">Feet</option>
-                      <option value="meters">Meters</option>
+                      <option hidden disabled selected value="-1"></option>
+                      <option value="0">Feet</option>
+                      <option value="1">Meters</option>
                     </select>
                   </div>
                 </div>
@@ -331,9 +331,9 @@
                   </div>
                   <div class="col-6">
                     <select name="type3" id="type3">
-                      <option hidden disabled selected value></option>
-                      <option value="copper">Copper</option>
-                      <option value="Aluminum">Aluminum</option>
+                      <option hidden disabled selected value="-1"></option>
+                      <option value="0">Copper</option>
+                      <option value="1">Aluminum</option>
                     </select>
                   </div>
                 </div>
@@ -416,9 +416,9 @@
                   </div>
                   <div class="col-6">
                     <select name="unit4" id="unit4">
-                      <option hidden disabled selected value></option>
-                      <option value="feet">Feet</option>
-                      <option value="meters">Meters</option>
+                      <option hidden disabled selected value="-1"></option>
+                      <option value="0">Feet</option>
+                      <option value="1">Meters</option>
                     </select>
                   </div>
                 </div>
@@ -430,9 +430,9 @@
                   </div>
                   <div class="col-6">
                     <select name="type4" id="type4">
-                      <option hidden disabled selected value></option>
-                      <option value="copper">Copper</option>
-                      <option value="Aluminum">Aluminum</option>
+                      <option hidden disabled selected value="-1"></option>
+                      <option value="0">Copper</option>
+                      <option value="1">Aluminum</option>
                     </select>
                   </div>
                 </div>
@@ -453,8 +453,8 @@
                     <p class="text-center">Wire Size</p>
                   </div>
                   <div class="col-6">
-                    <select name="sizeSelect4" id="sizeSelect4">
-                      <option hidden disabled selected value></option>
+                    <select name="size4" id="size4">
+                      <option hidden disabled selected value="-1"></option>
                       <option value="2.08">#14</option>
                       <option value="3.31">#12</option>
                       <option value="5.26">#10</option>
@@ -492,7 +492,7 @@
                   </div>
                   <div class="col-6">
                     <select name="volt4" id="volt4">
-                      <option hidden disabled selected value></option>
+                      <option hidden disabled selected value="-1"></option>
                       <option value="120">120</option>
                       <option value="208">208</option>
                       <option value="240">240</option>
@@ -509,7 +509,7 @@
                   </div>
                   <div class="col-6">
                     <select name="drop4" id="drop4">
-                      <option hidden disabled selected value></option>
+                      <option hidden disabled selected value="-1"></option>
                       <option value="0.02">2%</option>
                       <option value="0.03">3%</option>
                       <option value="0.05">5%</option>
@@ -520,7 +520,6 @@
               <div class="container lastField px-0">
                 <h4 class="result result4 text-center">
                   Length: <span id="result4"></span>
-                  <span id="resultUnits4">0</span>
                 </h4>
                 <div class="container d-flex justify-content-center">
                   <label class="buttonsLast label text-center mx-1" id="calculate4">CALCULATE</label>
