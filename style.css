@@ -12,7 +12,7 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 .mainSquares {
-  background: rgb(255, 255, 255);
+  background: url(./images/texture.jpg);
   -webkit-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
@@ -48,37 +48,34 @@ select, input {
 .buttonsFirst {
   background: rgb(107,0,255);
   color: white;
-  border: 1px solid rgb(0,255,242);
   border-radius: 8px;
   padding: 10px 0;
   transition: 0.5s ease-in-out;
 }
 .buttonsFirst:hover {
   background: rgb(0,255,242);
-  border: 1px solid rgb(107, 0, 255);
   color: black;
 }
 .buttonsLast {
   background: rgb(0,255,242);
-  border: 1px solid rgb(107,0,255);
   border-radius: 8px;
   padding: 10px 0;
   transition: all 0.5s ease-in-out;
 }
 .buttonsLast:hover {
   background: rgb(107,0,255);
-  border: 1px solid rgb(0, 255, 242);
   color: white;
 }
 .reset {
-  background: rgb(255, 0, 64);
+  background: rgb(255, 81, 0);
   color: white;
   border-radius: 8px;
   padding: 10px 0;
   transition: all 0.5s ease-in-out;
 }
 .reset:hover {
-  background: red;
+  /* background: red; */
+  background: #ff0000;
 }
 
 /* desktop */
