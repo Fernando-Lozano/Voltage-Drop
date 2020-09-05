@@ -1,4 +1,4 @@
-# Voltage-Drop
+# Voltage Drop
 
 This is a project built mainly for practice in JavaScript programming.  
 
