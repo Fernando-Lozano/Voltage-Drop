@@ -11,6 +11,7 @@ $(".navbar-nav>a").on("click", function () {
 // adds a class to toggler for animations
 const burger = document.querySelector(".navbar-toggler");
 const mainNav = document.querySelector("#mainNav");
+const collapsing = document.querySelector("#navbarNavAltMarkup");
 var firstOpen = false;
 burger.addEventListener("click", function () {
   if (!firstOpen) {
@@ -18,11 +19,11 @@ burger.addEventListener("click", function () {
     firstOpen = true;
     mainNav.classList.add("initialNav");
     
-  } else if (burger.classList.contains("collapsed")) {
+  } else if (burger.classList.contains("collapsed") && !(collapsing.classList.contains("collapsing"))) {
     burger.classList.add("open");
     mainNav.classList.add("initialNav");
 
-  } else {
+  } else if (!(collapsing.classList.contains("collapsing"))) {
     burger.classList.remove("open");
     mainNav.classList.remove("initialNav");
 
