@@ -81,7 +81,7 @@ select, input {
     min-height: 380px;
     max-width: 300px;
     margin: 8px 0px;
-    height: calc(50vh - 16px);
+    height: calc(100vh - 16px);
   }
   h4 {
     font-size: 1.25rem;
