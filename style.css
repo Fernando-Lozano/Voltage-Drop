@@ -81,7 +81,7 @@ select, input {
     min-height: 380px;
     max-width: 300px;
     margin: 8px 0px;
-    height: calc(100vh - 16px);
+    height: calc(50vh - 16px);
   }
   h4 {
     font-size: 1.25rem;
@@ -110,6 +110,11 @@ select, input {
   }
 }
 /* mobile */
+@media (max-height: 500px) {
+  .mainSquares {
+    height: calc(100vh - 16px);
+  }
+}
 @media (max-width: 767.98px) {
   html {
     scroll-behavior: smooth;
