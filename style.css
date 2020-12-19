@@ -3,15 +3,25 @@ body {
   background: linear-gradient(45deg, rgba(0,255,242,1) 0%, rgb(107,0,255) 100%);
   font-family: 'Roboto Mono', monospace;
 }
+h4 {
+  font-weight: bold;
+}
+p {
+  font-weight: bold;
+}
 .mainSquares {
-  background: url(./images/texture.jpg);
+  background: url(./images/newYear.jpg);
   -webkit-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   font-size: 0.8rem;
 }
+.normalBg{
+  background: url(./images/texture.jpg);
+}
+/* .newYearbBg */
 .mainHeaders {
-  padding-top: 12px; 
+  padding-top: 12px;
 }
 hr {
   width: 80%;
@@ -20,7 +30,7 @@ hr {
   padding-bottom: 1px;
 }
 .lastTwo {
-  border-top: 1px solid rgb(0,255,242);
+  border-top: 1px solid rgb(0, 255, 242);
   margin-top: 1px;
 }
 /* rounding square borders */
@@ -36,6 +46,7 @@ select, input {
   width: 40%;
   margin-top: 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 .buttonsFirst {
   background: rgb(107,0,255);
@@ -123,7 +134,7 @@ select, input {
     color: white;
   }
   .scrolled {
-      background: rgba(106, 0, 255, 0.7);
+      background: rgba(106, 0, 255, 0.9);
       transition: all 0.5s ease-in-out;
   }
   .initialNav {
