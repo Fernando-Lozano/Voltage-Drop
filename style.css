@@ -2,24 +2,36 @@ body {
   background: rgb(0,255,242);
   background: linear-gradient(45deg, rgba(0,255,242,1) 0%, rgb(107,0,255) 100%);
   font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
 }
 h4 {
   font-weight: bold;
 }
-p {
-  font-weight: bold;
+
+/* themes according to month */
+.normalBg{
+  background: url(./images/texture.jpg);
+}
+.newYearBg {
+  background: url(./images/newYear.jpg);
+}
+.easterBg {
+  background: url(./images/easter.jpg);
+}
+.halloweenBg {
+  background: url(./images/halloween.jpg);
+}
+.christmasBg {
+  background: url(./images/christmas.jpg);
 }
 .mainSquares {
-  background: url(./images/newYear.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
   -webkit-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
   font-size: 0.8rem;
 }
-.normalBg{
-  background: url(./images/texture.jpg);
-}
-/* .newYearbBg */
 .mainHeaders {
   padding-top: 12px;
 }

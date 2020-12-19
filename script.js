@@ -1,6 +1,3 @@
-// smooth scrolling
-
-
 // closes navbar when link is clicked
 $(".navbar-nav>a").on("click", function () {
   $(".navbar-collapse").collapse("hide");
@@ -36,6 +33,28 @@ $(function () {
     $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
   });
 });
+
+// change square background according to holiday months
+const squares = document.querySelectorAll(".mainSquares");
+const date = new Date();
+const month = date.getMonth();
+for (let square of squares) {
+  if (month === 0) {
+    square.classList.toggle("newYearBg");
+  }
+  else if (month === 3) {
+    square.classList.toggle("easterBg");
+  }
+  else if (month === 9) {
+    square.classList.toggle("halloweenBg");
+  }
+  else if (month === 11) {
+    square.classList.toggle("christmasBg");
+  }
+  else {
+    square.classList.toggle("normalBg");
+  }
+}
 
 // calculators
 
