@@ -164,7 +164,10 @@ select, input {
     margin-top: -56px;
   }
 
-/* hamburger menu */
+  /* hamburger menu */
+  .navbar-toggler {
+    margin: 0;
+  }
   .icon-bar {
   	width: 22px; 
   	height: 2px;
@@ -195,6 +198,11 @@ select, input {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
   }
+  /* flicker effect */
+  .flicker {
+    animation: lightning .8s ease-out infinite alternate;
+    animation-delay: .2s;
+  }
   /* main content */
   .mainSquares {
     margin: 10px 0;
@@ -216,4 +224,37 @@ select, input {
   p {
     font-size: 1rem;
   }
+}
+/* for flicker effect */
+@keyframes lightning {
+    0% {
+        background: #fff351;
+    }
+    10% {
+        background: #fff132;
+    }
+    12% {
+        background: transparent;
+    }
+    14% {
+        background: #fff132;
+    }
+    16% {
+        background: transparent;
+    }
+    18% {
+        background: #fff351;
+    }
+    20% {
+        background: transparent;
+    }
+    30% {
+        background: #fff01a;
+    }
+    90% {
+        background: transparent;
+    }
+    100% {
+        background: #fff45d;
+    }
 }
