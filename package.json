@@ -1,0 +1,23 @@
+{
+  "name": "voltagedropcalc",
+  "version": "1.0.0",
+  "description": "![Preview for the actual calculator](./images/voltDrop.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fernando-Lozano/Voltage-Drop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fernando-Lozano/Voltage-Drop/issues"
+  },
+  "homepage": "https://github.com/Fernando-Lozano/Voltage-Drop#readme",
+  "dependencies": {
+    "ejs": "^3.1.5"
+  }
+}
