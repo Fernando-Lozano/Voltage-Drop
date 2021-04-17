@@ -45,10 +45,10 @@
     </label>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link ml-auto" href="#singlePhaseSize">Single Phase Size</a>
-            <a class="nav-item nav-link ml-auto" href="#singlePhaseLength">Single Phase Length</a>
-            <a class="nav-item nav-link ml-auto" href="#threePhaseSize">Three Phase Size</a>
-            <a class="nav-item nav-link ml-auto" href="#threePhaseLength">Three Phase Length</a>
+            <a class="nav-item nav-link ml-auto" href="#singlePhaseSize" onclick="smoothScroll('#singlePhaseSize')">Single Phase Size</a>
+            <a class="nav-item nav-link ml-auto" href="#singlePhaseLength" onclick="smoothScroll('#singlePhaseLength')">Single Phase Length</a>
+            <a class="nav-item nav-link ml-auto" href="#threePhaseSize" onclick="smoothScroll('#threePhaseSize')">Three Phase Size</a>
+            <a class="nav-item nav-link ml-auto" href="#threePhaseLength" onclick="smoothScroll('#threePhaseLength')">Three Phase Length</a>
         </div>
     </div>
 </nav>
@@ -522,6 +522,16 @@
     <!-- my scripts -->
     <script src="./script.js" type="text/javaScript"></script>
     <script src="./nav.js" type="text/javaScript"></script>
+    <!-- polyfill for smooth scroll in Safari -->
+    <script src="./smoothscrollPoly.min.js"></script>
+
+    <!-- this overrides href allowing smoothscroll to function in Safari -->
+    <script>
+        function smoothScroll(scrollto) {
+            document.querySelector(scrollto).scrollIntoView({ behavior: 'smooth' });
+            return false;
+        }
+    </script>
 </body>
 
 </html>
