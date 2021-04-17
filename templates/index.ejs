@@ -47,6 +47,17 @@
     <!-- my scripts -->
     <script src="./script.js" type="text/javaScript"></script>
     <script src="./nav.js" type="text/javaScript"></script>
+
+    <!-- polyfill for smooth scroll in Safari -->
+    <script src="./smoothscrollPoly.min.js"></script>
+    
+    <!-- this overrides href allowing smoothscroll to function in Safari -->
+    <script>
+        function smoothScroll(scrollto) {
+            document.querySelector(scrollto).scrollIntoView({ behavior: 'smooth' });
+            return false;
+        }
+    </script>
 </body>
 
 </html>
