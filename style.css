@@ -25,6 +25,7 @@ h4 {
   background: url(./images/christmas.jpg);
 }
 .mainSquares {
+  overflow: hidden;
   background-repeat:no-repeat;
   background-size: cover;
   -webkit-box-shadow: 6px 6px 23px 1px rgba(0,0,0,0.75);
@@ -33,17 +34,9 @@ h4 {
   font-size: 0.8rem;
 }
 .mainHeaders {
-  padding-top: 12px;
-}
-hr {
-  width: 80%;
-  border-top: 1px solid rgb(107,0,255);
-  margin-top: 1px;
-  padding-bottom: 1px;
-}
-.lastTwo {
-  border-top: 1px solid rgb(0, 255, 242);
-  margin-top: 1px;
+  padding: 12px 0;
+  background-color: aqua;
+  margin-bottom: 12px;
 }
 /* rounding square borders */
 .roundedCorners {
