@@ -2,6 +2,7 @@
 const squares = document.querySelectorAll(".mainSquares");
 const date = new Date();
 const month = date.getMonth();
+const holidayIcon = document.querySelector("#holidayIcon");
 for (let square of squares) {
   if (month === 0) {
     square.classList.toggle("newYearBg");
@@ -11,6 +12,8 @@ for (let square of squares) {
   }
   else if (month === 9) {
     square.classList.toggle("halloweenBg");
+    holidayIcon.classList.add("fa", "fa-ghost");
+    holidayIcon.style.color = "orange";
   }
   else if (month === 11) {
     square.classList.toggle("christmasBg");
