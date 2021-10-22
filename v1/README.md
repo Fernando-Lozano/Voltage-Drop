@@ -1,7 +1,5 @@
 # todo:
-    add new icons and links v1 folder
-    maybe remove ejs (it is overkill)
-
+    make this calculator the main
 # note:
     
 
@@ -13,9 +11,7 @@
     connected calcs to js
     changed nav color
     changed icon color
+    tested functionality
 
 # Intent:
     Simply re-designing the layout of the calculators. The functionality will remain the same
-
-# Ideas
-    maybe add particle js for snow in december month?
