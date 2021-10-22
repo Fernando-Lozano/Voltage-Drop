@@ -251,7 +251,7 @@ var loads4;
 var sizes4;
 var volts4;
 var drops4;
-var vDrop4;
+var vDrops4;
 var k4;
 var cm4;
 calculate4.addEventListener("click", () => {

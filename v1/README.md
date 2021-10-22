@@ -1,6 +1,5 @@
 # todo:
     add new icons and links v1 folder
-    make sure calcs are functioning properly
     maybe remove ejs (it is overkill)
 
 # note:

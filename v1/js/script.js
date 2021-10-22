@@ -28,6 +28,11 @@ const wiresMm2 = [
   380,
   405,
   456,
+  507,
+  633,
+  760,
+  887,
+  1010
 ];
 // array containing readable wire sizes matching wiresMm2 array
 const wiresRead = [
@@ -56,7 +61,12 @@ const wiresRead = [
   "700 kcmil",
   "750 kcmil",
   "800 kcmil",
-  "900 kcmil"
+  "900 kcmil",
+  "1000 kcmil",
+  "1250 kcmil",
+  "1500 kcmil",
+  "1750 kcmil",
+  "2000 kcmil"
 ];
 // two-dimensional array for Resistance of conductor: index 0 for copper , index 1 for aluminum
 const k = [
@@ -96,7 +106,7 @@ calculate1.addEventListener("click", () => {
   lengths1 = Number(length1.value);
   volts1 = Number(volt1.value);
   drops1 = Number(drop1.value);
-  vDrop1 = Number((volts1 * drops1).toFixed(2));
+  vDrop1 = Number((volts1 * drops1).toFixed(4));
   if (!(units1 === -1 || types1 === -1)) {
     k1 = k[types1][units1];
   }
@@ -147,7 +157,7 @@ calculate2.addEventListener("click", () => {
   if (drop2.value !== "-1") {
     drops2 = Number(drop2.value);
   }
-  vDrops2 = Number((volts2 * drops2).toFixed(2));
+  vDrops2 = Number((volts2 * drops2).toFixed(4));
   if (!(units2 === -1 || types2 === -1)) {
     k2 = k[types2][units2];
   }
@@ -192,7 +202,7 @@ calculate3.addEventListener("click", () => {
   lengths3 = Number(length3.value);
   volts3 = Number(volt3.value);
   drops3 = Number(drop3.value);
-  vDrop3 = Number((volts3 * drops3).toFixed(2));
+  vDrop3 = Number((volts3 * drops3).toFixed(4));
   if (!(units3 === -1 || types3 === -1)) {
     k3 = k[types3][units3];
   }
@@ -243,12 +253,12 @@ calculate4.addEventListener("click", () => {
   if (drop4.value !== "-1") {
     drops4 = Number(drop4.value);
   }
-  vDrops4 = Number((volts4 * drops4).toFixed(2));
+  vDrop4 = Number((volts4 * drops4).toFixed(4));
   if (!(units4 === -1 || types4 === -1)) {
     k4 = k[types4][units4];
   }
   cm4 = (sizes4 / special).toFixed(4);
-  answer4.textContent = findLength(units4, cm4, vDrops4, k4, loads4, special1);
+  answer4.textContent = findLength(units4, cm4, vDrop4, k4, loads4, special1);
 });
 reset4.addEventListener("click", () => {
   unit4.value = "-1";
@@ -268,7 +278,7 @@ reset4.addEventListener("click", () => {
 // search array to find wire size
 function findAnswer(mm) {
   for (let i = 0; i < wiresMm2.length; i++) {
-    if (mm < wiresMm2[i]) {
+    if (mm <= wiresMm2[i]) {
       return wiresRead[i];
     }
     else if (mm > wiresMm2[i] && mm <= wiresMm2[i + 1]) {
