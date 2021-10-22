@@ -1,0 +1,92 @@
+:root {
+    --pColor: #131516;
+    --sColor: #1D1F20;
+    --text: #1FA2FF;
+}
+html {
+    scroll-behavior: smooth;
+}
+.offset {
+    position: absolute;
+    margin: 0;
+    height: 56px;
+    margin-top: calc(-56px - 0.5rem);
+}
+#navbar {
+    background: var(--pColor);
+    background: linear-gradient(0deg, var(--pColor) 26%, var(--sColor) 100%);
+}
+#brand {
+    color: var(--text);
+}
+/* hamburger menu */
+.navbar-toggler {
+    margin: 0;
+}
+.icon-bar {
+    width: 22px; 
+    height: 2px;
+    background-color: white;
+    border-radius: 20px;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+}
+.open .top-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 10%;
+    width: 20px;
+}
+    
+.open .middle-bar {
+    width: 15px;
+    transform: rotate(-10deg) translate(2px, -6px);
+}
+
+.open .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* flicker effect */
+.flicker {
+    animation: lightning .8s ease-out infinite alternate;
+    animation-delay: .2s;
+}
+/* for flicker effect */
+@keyframes lightning {
+    0% {
+        background: #fff351;
+    }
+    10% {
+        background: #fff132;
+    }
+    12% {
+        background: transparent;
+    }
+    14% {
+        background: #fff132;
+    }
+    16% {
+        background: transparent;
+    }
+    18% {
+        background: #fff351;
+    }
+    20% {
+        background: transparent;
+    }
+    30% {
+        background: #fff01a;
+    }
+    90% {
+        background: transparent;
+    }
+    100% {
+        background: #fff45d;
+    }
+}

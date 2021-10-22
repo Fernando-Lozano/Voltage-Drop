@@ -1,0 +1,85 @@
+:root {
+    --black: #131516;
+    --white: white;
+    --cards: #1D1F20;
+    --primary: #1FA2FF;
+    --radi: 1rem;
+}
+root {
+    overflow-y: hidden;
+}
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 575.98px) {
+    .mTop {
+        margin-top: 56px !important;
+    }
+}
+.calculators {
+    width: 300px !important;
+    background-color: var(--cards);
+    border-radius: var(--radi);
+}
+
+select, input {
+    font-size: 0.8rem !important;
+    color: var(--white) !important;
+    background-color: var(--cards) !important;
+    border: 1px solid var(--primary) !important;
+}
+/* changes the color of the select arrow */
+select {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !important;
+}
+
+/* removes the arrows for the number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    font-size: 0.8rem !important;
+}
+.btnCalc {
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)
+}
+.btnCalc {
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+}
+
+.btnCalc:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btnReset {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%)
+}
+.btnReset {
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+}
+.btnReset:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+footer {
+    background-color: var(--cards);
+}
