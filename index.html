@@ -4,523 +4,437 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./nav.css" />
-    <!-- sites favicon -->
+    <!-- link to font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="B" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1d1f20">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- link to font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
-    <title>2KIL/CM</title>
+    <meta name="theme-color" content="#1d1f20">
+    <title>VOLTAGE</title>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="0">
-
-    <!-- the nav bar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top d-md-none" id="mainNav">
-    <a class="navbar-brand" href="#">
-        <p class="p-0 m-0 navbarContent">VOLTAGE <sub>DROP</sub> <i id="holidayIcon"></i></p>
-    </a>
-    <label class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-    </label>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link ml-auto" href="#singlePhaseSize" onclick="smoothScroll('#singlePhaseSize')">Single Phase Size</a>
-            <a class="nav-item nav-link ml-auto" href="#singlePhaseLength" onclick="smoothScroll('#singlePhaseLength')">Single Phase Length</a>
-            <a class="nav-item nav-link ml-auto" href="#threePhaseSize" onclick="smoothScroll('#threePhaseSize')">Three Phase Size</a>
-            <a class="nav-item nav-link ml-auto" href="#threePhaseLength" onclick="smoothScroll('#threePhaseLength')">Three Phase Length</a>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="56">
+    <!-- ------- navbar ------- -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top d-sm-none" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="brand">VOLTAGE <sub>DROP</sub></a>
+        <label class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </label>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link text-end m-1" href="#singlePhaseSize" onclick="smoothScroll('#singlePhaseSize')">1&#216; find size</a>
+                <a class="nav-link text-end m-1" href="#singlePhaseLength" onclick="smoothScroll('#singlePhaseLength')">1&#216; find length</a>
+                <a class="nav-link text-end m-1" href="#threePhaseSize" onclick="smoothScroll('#threePhaseSize')">3&#216; find size</a>
+                <a class="nav-link text-end m-1" href="#threePhaseLength" onclick="smoothScroll('#threePhaseLength')">3&#216; find length</a>
+            </div>
         </div>
     </div>
 </nav>
-    <!-- main content -->
-<div class="container">
-    <div class="row">
-        <!-- first square -->
-        <div class="col-md-6 px-md-2">
-            <h1 id="singlePhaseSize" class="menuOffset1"></h1>
-            <div class="mainSquares firstThirdSquare roundedCorners">
-                <h4 class="text-center mainHeaders">1&#216; Find Size</h4>
-                <div id="firstDiv" class="container-fluid main">
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6 px-0">
-                                <p class="text-center">Unit of measure</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="unit1" id="unit1">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Feet</option>
-                                    <option value="1">Meters</option>
-                                </select>
-                            </div>
-                        </div>
+
+<!-- -------- main content -------- -->
+<div class=" d-md-flex flex-md-column justify-content-md-center min-vh-100">
+
+    <!-- single phase calculators -->
+    <div class="row d-flex justify-content-center m-0 mt-2 mTop">
+
+        <!-- single phase find size -->
+        <div class="col-sm-6 row justify-content-center justify-content-sm-end">
+            <div class="calculators m-2">
+                <p class="offset" id="singlePhaseSize"></p>
+                <div class="my-4">
+                    <h4 class="text-center">1&#216; FIND SIZE</h4>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="unit1" class="col-6 col-form-label col-form-label-sm pe-0 text-truncate">UNIT OF MEASURE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="unit1" aria-label="Floating label select example">
+                            <option hidden="" disabled="" selected="" value="-1"></option>
+                            <option value="0">Feet</option>
+                            <option value="1">Meters</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Wire type</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="type1" id="type1">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Copper</option>
-                                    <option value="1">Aluminum</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="type1" class="col-6 col-form-label col-form-label-sm">WIRE TYPE</label>
+                    <div class="col-6">
+                    <select class="form-select" id="type1">
+                        <option hidden disabled selected value="-1"></option>
+                        <option value="0">Copper</option>
+                        <option value="1">Aluminum</option>
+                    </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Load (Amps)</p>
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="load1" id="load1" />
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="load1" class="col-6 col-form-label col-form-label-sm">AMPS</label>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="load1">
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Length</p>
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="length1" id="length1" />
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="length1" class="col-6 col-form-label col-form-label-sm">LENGTH</label>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="length1">
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Voltage</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="volt1" id="volt1">
-                                    <option hidden disabled selected value></option>
-                                    <option value="120">120</option>
-                                    <option value="208">208</option>
-                                    <option value="240">240</option>
-                                    <option value="347">347</option>
-                                    <option value="600">600</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="volt1" class="col-6 col-form-label col-form-label-sm">VOLTAGE</label>
+                    <div class="col-6">
+                    <select class="form-select" id="volt1">
+                        <option hidden disabled selected value="-1"></option>
+                        <option hidden disabled selected value></option>
+                        <option value="120">120</option>
+                        <option value="208">208</option>
+                        <option value="240">240</option>
+                        <option value="347">347</option>
+                        <option value="600">600</option>
+                    </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center lastP">Voltage drop</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="drop1" id="drop1">
-                                    <option hidden disabled selected value></option>
-                                    <option value="0.02">2%</option>
-                                    <option value="0.03">3%</option>
-                                    <option value="0.05">5%</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="drop1" class="col-6 col-form-label col-form-label-sm">VOLTAGE DROP</label>
+                    <div class="col-6">
+                    <select class="form-select" id="drop1">
+                        <option hidden disabled selected value></option>
+                        <option value="0.02">2%</option>
+                        <option value="0.03">3%</option>
+                        <option value="0.05">5%</option>
+                    </select>
                     </div>
-                    <div class="container lastField px-0">
-                        <h4 class="result result1 text-center">
-                            Size: <span id="result1">0</span>
-                        </h4>
-                        <div class="container d-flex justify-content-center">
-                            <label class="buttonsFirst label text-center mx-1" id="calculate1">CALCULATE</label>
-                            <label class="reset label text-center mx-1" id="reset1">RESET</label>
-                        </div>
-                    </div>
+                </div>
+                <div class="my-2">
+                    <h5 class="text-center"><span id="result1">&nbsp;</span></h5>
+                </div>
+                <div class="d-flex my-3 px-4">
+                    <button class="btn btnCalc w-50 mx-1" id="calculate1">CALCULATE</button>
+                    <button class="btn btnReset w-50 mx-1" id="reset1">RESET</button>
                 </div>
             </div>
         </div>
-        <!-- the second square -->
-        <div class="col-md-6 px-md-2">
-            <h1 id="singlePhaseLength" class="menuOffset"></h1>
-            <div class="mainSquares roundedCorners">
-                <h4 class="text-center mainHeaders">1&#216; Find Length</h4>
-                <div id="secondDiv" class="container-fluid main">
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6 px-0">
-                                <p class="text-center">Unit of measure</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="unit2" id="unit2">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Feet</option>
-                                    <option value="1">Meters</option>
-                                </select>
-                            </div>
-                        </div>
+
+        <!-- single phase find length -->
+        <div class="col-sm-6 row justify-content-center justify-content-sm-start">
+            <div class="calculators m-2">
+                <p id="singlePhaseLength" class="offset"></p>
+                <div class="my-4">
+                    <h4 class="text-center">1&#216; FIND LENGTH</h4>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="unit2" class="col-6 col-form-label col-form-label-sm pe-0 text-truncate">UNIT OF MEASURE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="unit2" aria-label="Floating label select example">
+                            <option hidden="" disabled="" selected="" value="-1"></option>
+                            <option value="0">Feet</option>
+                            <option value="1">Meters</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Wire type</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="type2" id="type2">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Copper</option>
-                                    <option value="1">Aluminum</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="type2" class="col-6 col-form-label col-form-label-sm">WIRE TYPE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="type2">
+                            <option hidden disabled selected value="-1"></option>
+                            <option value="0">Copper</option>
+                            <option value="1">Aluminum</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Load (Amps)</p>
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="load2" id="load2" />
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="load2" class="col-6 col-form-label col-form-label-sm">AMPS</label>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="load2">
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Wire size</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="size2" id="size2">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="2.08">#14</option>
-                                    <option value="3.31">#12</option>
-                                    <option value="5.26">#10</option>
-                                    <option value="8.37">#8</option>
-                                    <option value="13.3">#6</option>
-                                    <option value="21.2">#4</option>
-                                    <option value="26.7">#3</option>
-                                    <option value="33.6">#2</option>
-                                    <option value="42.4">#1</option>
-                                    <option value="53.5">1/0</option>
-                                    <option value="67.4">2/0</option>
-                                    <option value="85">3/0</option>
-                                    <option value="107">4/0</option>
-                                    <option value="127">250 kcmil</option>
-                                    <option value="152">300 kcmil</option>
-                                    <option value="177">350 kcmil</option>
-                                    <option value="203">400 kcmil</option>
-                                    <option value="228">450 kcmil</option>
-                                    <option value="253">500 kcmil</option>
-                                    <option value="279">550 kcmil</option>
-                                    <option value="304">600 kcmil</option>
-                                    <option value="329">650 kcmil</option>
-                                    <option value="355">700 kcmil</option>
-                                    <option value="380">750 kcmil</option>
-                                    <option value="405">800 kcmil</option>
-                                    <option value="456">900 kcmil</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="size2" class="col-6 col-form-label col-form-label-sm">WIRE SIZE</label>
+                    <div class="col-6">
+                        <select class="form-select" name="size2" id="size2">
+                            <option hidden disabled selected value="-1"></option>
+                            <option value="2.08">#14</option>
+                            <option value="3.31">#12</option>
+                            <option value="5.26">#10</option>
+                            <option value="8.37">#8</option>
+                            <option value="13.3">#6</option>
+                            <option value="21.2">#4</option>
+                            <option value="26.7">#3</option>
+                            <option value="33.6">#2</option>
+                            <option value="42.4">#1</option>
+                            <option value="53.5">1/0</option>
+                            <option value="67.4">2/0</option>
+                            <option value="85">3/0</option>
+                            <option value="107">4/0</option>
+                            <option value="127">250 kcmil</option>
+                            <option value="152">300 kcmil</option>
+                            <option value="177">350 kcmil</option>
+                            <option value="203">400 kcmil</option>
+                            <option value="228">450 kcmil</option>
+                            <option value="253">500 kcmil</option>
+                            <option value="279">550 kcmil</option>
+                            <option value="304">600 kcmil</option>
+                            <option value="329">650 kcmil</option>
+                            <option value="355">700 kcmil</option>
+                            <option value="380">750 kcmil</option>
+                            <option value="405">800 kcmil</option>
+                            <option value="456">900 kcmil</option>
+                            <option value="507">1000 kcmil</option>
+                            <option value="633">1250 kcmil</option>
+                            <option value="760">1500 kcmil</option>
+                            <option value="887">1750 kcmil</option>
+                            <option value="1010">2000 kcmil</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Voltage</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="volt2" id="volt2">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="120">120</option>
-                                    <option value="208">208</option>
-                                    <option value="240">240</option>
-                                    <option value="347">347</option>
-                                    <option value="600">600</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="volt2" class="col-6 col-form-label col-form-label-sm">VOLTAGE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="volt2">
+                            <option hidden disabled selected value="-1"></option>
+                            <option hidden disabled selected value></option>
+                            <option value="120">120</option>
+                            <option value="208">208</option>
+                            <option value="240">240</option>
+                            <option value="347">347</option>
+                            <option value="600">600</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center lastP">Voltage drop</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="drop2" id="drop2">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0.02">2%</option>
-                                    <option value="0.03">3%</option>
-                                    <option value="0.05">5%</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="drop2" class="col-6 col-form-label col-form-label-sm">VOLTAGE DROP</label>
+                    <div class="col-6">
+                        <select class="form-select" id="drop2">
+                            <option hidden disabled selected value></option>
+                            <option value="0.02">2%</option>
+                            <option value="0.03">3%</option>
+                            <option value="0.05">5%</option>
+                        </select>
                     </div>
-                    <div class="container lastField px-0">
-                        <h4 class="result result2 text-center">
-                            Length: <span id="result2">0</span>
-                        </h4>
-                        <div class="container d-flex justify-content-center">
-                            <label class="buttonsFirst label text-center mx-1" id="calculate2">CALCULATE</label>
-                            <label class="reset label text-center mx-1" id="reset2">RESET</label>
-                        </div>
-                    </div>
+                </div>
+                <div class="my-2">
+                    <h5 class="text-center"><span id="result2">&nbsp;</span></h5>
+                </div>
+                <div class="d-flex my-3 px-4">
+                    <button class="btn btnCalc w-50 mx-1" id="calculate2">CALCULATE</button>
+                    <button class="btn btnReset w-50 mx-1" id="reset2">RESET</button>
                 </div>
             </div>
         </div>
-        <!-- the third square -->
-        <div class="col-md-6 px-md-2">
-            <h1 id="threePhaseSize" class="menuOffset"></h1>
-            <div class="mainSquares firstThirdSquare roundedCorners">
-                <h4 id="" class="text-center mainHeaders">3&#216; Find Size</h4>
-                <div id="thirdDiv" class="container-fluid main">
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6 px-0">
-                                <p class="text-center">Unit of measure</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="unit3" id="unit3">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Feet</option>
-                                    <option value="1">Meters</option>
-                                </select>
-                            </div>
-                        </div>
+    </div>
+
+    <!-- three phase phase calculators -->
+    <div class="row d-flex justify-content-center m-0 mb-2">
+
+        <!-- three phase phase find size -->
+        <div class="col-sm-6 row justify-content-center justify-content-sm-end">
+            <div class="calculators m-2">
+                <p id="threePhaseSize" class="offset"></p>
+                <div class="my-4">
+                    <h4 class="text-center">3&#216; FIND SIZE</h4>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="unit3" class="col-6 col-form-label col-form-label-sm pe-0 text-truncate">UNIT OF MEASURE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="unit3" aria-label="Floating label select example">
+                            <option hidden="" disabled="" selected="" value="-1"></option>
+                            <option value="0">Feet</option>
+                            <option value="1">Meters</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Wire type</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="type3" id="type3">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Copper</option>
-                                    <option value="1">Aluminum</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="type3" class="col-6 col-form-label col-form-label-sm">WIRE TYPE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="type3">
+                            <option hidden disabled selected value="-1"></option>
+                            <option value="0">Copper</option>
+                            <option value="1">Aluminum</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Load (Amps)</p>
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="load3" id="load3" />
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="load3" class="col-6 col-form-label col-form-label-sm">AMPS</label>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="load3">
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Length</p>
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="length3" id="length3" />
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="length3" class="col-6 col-form-label col-form-label-sm">LENGTH</label>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="length3">
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Voltage</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="volt3" id="volt3">
-                                    <option hidden disabled selected value></option>
-                                    <option value="120">120</option>
-                                    <option value="208">208</option>
-                                    <option value="240">240</option>
-                                    <option value="347">347</option>
-                                    <option value="600">600</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="volt3" class="col-6 col-form-label col-form-label-sm">VOLTAGE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="volt3">
+                            <option hidden disabled selected value="-1"></option>
+                            <option hidden disabled selected value></option>
+                            <option value="120">120</option>
+                            <option value="208">208</option>
+                            <option value="240">240</option>
+                            <option value="347">347</option>
+                            <option value="600">600</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center lastP">Voltage drop</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="drop3" id="drop3">
-                                    <option hidden disabled selected value></option>
-                                    <option value="0.02">2%</option>
-                                    <option value="0.03">3%</option>
-                                    <option value="0.05">5%</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="drop3" class="col-6 col-form-label col-form-label-sm">VOLTAGE DROP</label>
+                    <div class="col-6">
+                        <select class="form-select" id="drop3">
+                            <option hidden disabled selected value></option>
+                            <option value="0.02">2%</option>
+                            <option value="0.03">3%</option>
+                            <option value="0.05">5%</option>
+                        </select>
                     </div>
-                    <div class="container lastField px-0">
-                        <h4 class="result result3 text-center">
-                            Size: <span id="result3">0</span>
-                        </h4>
-                        <div class="container d-flex justify-content-center">
-                            <label class="buttonsLast label text-center mx-1" id="calculate3">CALCULATE</label>
-                            <label class="reset label text-center mx-1" id="reset3">RESET</label>
-                        </div>
-                    </div>
+                </div>
+                <div class="my-2">
+                    <h5 class="text-center"><span id="result3">&nbsp;</span></h5>
+                </div>
+                <div class="d-flex my-3 px-4">
+                    <button class="btn btnCalc w-50 mx-1" id="calculate3">CALCULATE</button>
+                    <button class="btn btnReset w-50 mx-1" id="reset3">RESET</button>
                 </div>
             </div>
         </div>
-        <!-- the fourth square -->
-        <div class="col-md-6 px-md-2">
-            <h1 id="threePhaseLength" class="menuOffset"></h1>
-            <div class="mainSquares roundedCorners">
-                <h4 id="" class="text-center mainHeaders">3&#216; Find Length</h4>
-                <div id="fourthDiv" class="container-fluid main">
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6 px-0">
-                                <p class="text-center">Unit of measure</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="unit4" id="unit4">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Feet</option>
-                                    <option value="1">Meters</option>
-                                </select>
-                            </div>
-                        </div>
+
+        <!-- three phase find length -->
+        <div class="col-sm-6 row justify-content-center justify-content-sm-start">
+            <div class="m-2 calculators">
+                <p id="threePhaseLength" class="offset"></p>
+                <div class="my-4">
+                    <h4 class="text-center">3&#216; FIND LENGTH</h4>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="unit4" class="col-6 col-form-label col-form-label-sm pe-0 text-truncate">UNIT OF MEASURE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="unit4" aria-label="Floating label select example">
+                            <option hidden="" disabled="" selected="" value="-1"></option>
+                            <option value="0">Feet</option>
+                            <option value="1">Meters</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Wire type</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="type4" id="type4">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0">Copper</option>
-                                    <option value="1">Aluminum</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="type4" class="col-6 col-form-label col-form-label-sm">WIRE TYPE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="type4">
+                            <option hidden disabled selected value="-1"></option>
+                            <option value="0">Copper</option>
+                            <option value="1">Aluminum</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Load (Amps)</p>
-                            </div>
-                            <div class="col-6">
-                                <input type="number" name="load4" id="load4" />
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="load4" class="col-6 col-form-label col-form-label-sm">AMPS</label>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="load4">
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Wire size</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="size4" id="size4">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="2.08">#14</option>
-                                    <option value="3.31">#12</option>
-                                    <option value="5.26">#10</option>
-                                    <option value="8.37">#8</option>
-                                    <option value="13.3">#6</option>
-                                    <option value="21.2">#4</option>
-                                    <option value="26.7">#3</option>
-                                    <option value="33.6">#2</option>
-                                    <option value="42.4">#1</option>
-                                    <option value="53.5">1/0</option>
-                                    <option value="67.4">2/0</option>
-                                    <option value="85">3/0</option>
-                                    <option value="107">4/0</option>
-                                    <option value="127">250 kcmil</option>
-                                    <option value="152">300 kcmil</option>
-                                    <option value="177">350 kcmil</option>
-                                    <option value="203">400 kcmil</option>
-                                    <option value="228">450 kcmil</option>
-                                    <option value="253">500 kcmil</option>
-                                    <option value="279">550 kcmil</option>
-                                    <option value="304">600 kcmil</option>
-                                    <option value="329">650 kcmil</option>
-                                    <option value="355">700 kcmil</option>
-                                    <option value="380">750 kcmil</option>
-                                    <option value="405">800 kcmil</option>
-                                    <option value="456">900 kcmil</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="size4" class="col-6 col-form-label col-form-label-sm">WIRE SIZE</label>
+                    <div class="col-6">
+                        <select class="form-select" name="size2" id="size4">
+                            <option hidden disabled selected value="-1"></option>
+                            <option value="2.08">#14</option>
+                            <option value="3.31">#12</option>
+                            <option value="5.26">#10</option>
+                            <option value="8.37">#8</option>
+                            <option value="13.3">#6</option>
+                            <option value="21.2">#4</option>
+                            <option value="26.7">#3</option>
+                            <option value="33.6">#2</option>
+                            <option value="42.4">#1</option>
+                            <option value="53.5">1/0</option>
+                            <option value="67.4">2/0</option>
+                            <option value="85">3/0</option>
+                            <option value="107">4/0</option>
+                            <option value="127">250 kcmil</option>
+                            <option value="152">300 kcmil</option>
+                            <option value="177">350 kcmil</option>
+                            <option value="203">400 kcmil</option>
+                            <option value="228">450 kcmil</option>
+                            <option value="253">500 kcmil</option>
+                            <option value="279">550 kcmil</option>
+                            <option value="304">600 kcmil</option>
+                            <option value="329">650 kcmil</option>
+                            <option value="355">700 kcmil</option>
+                            <option value="380">750 kcmil</option>
+                            <option value="405">800 kcmil</option>
+                            <option value="456">900 kcmil</option>
+                            <option value="507">1000 kcmil</option>
+                            <option value="633">1250 kcmil</option>
+                            <option value="760">1500 kcmil</option>
+                            <option value="887">1750 kcmil</option>
+                            <option value="1010">2000 kcmil</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center">Voltage</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="volt4" id="volt4">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="120">120</option>
-                                    <option value="208">208</option>
-                                    <option value="240">240</option>
-                                    <option value="347">347</option>
-                                    <option value="600">600</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="volt4" class="col-6 col-form-label col-form-label-sm">VOLTAGE</label>
+                    <div class="col-6">
+                        <select class="form-select" id="volt4">
+                            <option hidden disabled selected value="-1"></option>
+                            <option hidden disabled selected value></option>
+                            <option value="120">120</option>
+                            <option value="208">208</option>
+                            <option value="240">240</option>
+                            <option value="347">347</option>
+                            <option value="600">600</option>
+                        </select>
                     </div>
-                    <div class="container mainFields">
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="text-center lastP">Voltage drop</p>
-                            </div>
-                            <div class="col-6">
-                                <select name="drop4" id="drop4">
-                                    <option hidden disabled selected value="-1"></option>
-                                    <option value="0.02">2%</option>
-                                    <option value="0.03">3%</option>
-                                    <option value="0.05">5%</option>
-                                </select>
-                            </div>
-                        </div>
+                </div>
+                <div class="row mb-3 mb-sm-2">
+                    <label for="drop4" class="col-6 col-form-label col-form-label-sm">VOLTAGE DROP</label>
+                    <div class="col-6">
+                        <select class="form-select" id="drop4">
+                            <option hidden disabled selected value></option>
+                            <option value="0.02">2%</option>
+                            <option value="0.03">3%</option>
+                            <option value="0.05">5%</option>
+                        </select>
                     </div>
-                    <div class="container lastField px-0">
-                        <h4 class="result result4 text-center">
-                            Length: <span id="result4"></span>
-                        </h4>
-                        <div class="container d-flex justify-content-center">
-                            <label class="buttonsLast label text-center mx-1" id="calculate4">CALCULATE</label>
-                            <label class="reset label text-center mx-1" id="reset4">RESET</label>
-                        </div>
-                    </div>
+                </div>
+                <div class="my-2">
+                    <h5 class="text-center"><span id="result4">&nbsp;</span></h5>
+                </div>
+                <div class="d-flex my-3 px-4">
+                    <button class="btn btnCalc w-50 mx-1" id="calculate4">CALCULATE</button>
+                    <button class="btn btnReset w-50 mx-1" id="reset4">RESET</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<footer class="d-sm-none px-4 py-3 mt-5 text-center">
+        <span class="text-muted">2021 FERNANDO LOZANO</span>
+</footer>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
-    crossorigin="anonymous"></script>
-    <!-- my scripts -->
-    <script src="./script.js" type="text/javaScript"></script>
-    <script src="./nav.js" type="text/javaScript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js" type="text/javaScript"></script>
+    <script src="./js/nav.js" type="text/javaScript"></script>
 
     <!-- polyfill for smooth scroll in Safari -->
-    <script src="./smoothscrollPoly.min.js"></script>
+    <script src="./js/smoothscrollPoly.min.js"></script>
     
     <!-- this overrides href allowing smoothscroll to function in Safari -->
     <script>
