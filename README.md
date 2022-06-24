@@ -1,7 +1,5 @@
 # Voltage Drop Calculator
 
-![Preview for the actual calculator](./images/voltDrop.jpg)
-
 ## Why I built it!
 
 This project was built with a twofold purpose: first, to develop my skills in JavaScript; second, I have made it
