@@ -1,4 +1,7 @@
 # Voltage Drop Calculator
+## Usage
+
+![Voltage Drop](./images/screenshot.png)
 
 ## Why I built it!
 
