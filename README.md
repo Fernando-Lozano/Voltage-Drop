@@ -5,7 +5,7 @@
 
 ## Why I built it!
 
-This project was built with a twofold purpose: First, to develop my skills in JavaScript; second, I have made it
+[Voltage Drop](https://voltage-drop.vercel.app/) was built with a twofold purpose: First, to develop my skills in JavaScript; second, I have made it
 quick and efficient for on-the-job calculations, as I am a licensed Journeyman Electrician.
 
 ## Functionality and formula
